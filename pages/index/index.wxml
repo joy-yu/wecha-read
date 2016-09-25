@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<scroll-view class="container" scroll-y="true" scroll-top="{{scrollTop}}"  bindtap="showBottom" bindtouchmove="hideBottom">
+
+  <view class="article">
+    <text class="title">{{title}}</text>
+    <text class="author">{{author}}</text>
+
+    <view class="main">
+      <text wx:for="{{main}}">{{item}}</text>
+    </view>
+    
+  </view>
+
+  <view class="random-area">
+    <button catchtap="getRandom" type="primary">随机一篇</button>
+  </view>
+
+</scroll-view>
+
+<view class="bottom" animation="{{bottomAnimation}}">
+    <text catchtap="toTop">看我也没用</text>
+    <text catchtap="getRandom">随机一篇</text>
+    <text catchtap="getToday">今日文章</text>
+    
+</view>
